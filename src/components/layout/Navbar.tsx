@@ -48,7 +48,7 @@ export default function Navbar() {
           </div>
 
           <a
-            href="https://drive.google.com/file/d/1flilFkJT5VDtWjNCu8gHa7rsaVLsc3KT/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1rCiM1Kjvk50_3_DrDiqpanE5QQ7NZW-Q/view?usp=drive_link"
             target="_blank"
             rel="noreferrer"
             className="hidden lg:flex px-4 py-2 rounded-full bg-blue-600/10 text-blue-400 font-medium hover:bg-blue-600 hover:text-white transition-all border border-blue-500/30 ml-2"
