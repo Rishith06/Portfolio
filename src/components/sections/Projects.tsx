@@ -23,7 +23,7 @@ const projects = [
     shortDesc: 'Dynamic asset allocation strategy backtested over 25+ years.',
     fullDesc: 'Designed a dynamic asset allocation strategy using NIFTY/Gold ratio, moving averages, and z-score-based rebalancing. Backtested over 25+ years of Indian equity and commodity data. Applied a Random Forest model to optimize moving-average windows on historical data.',
     tech: ['Python', 'Pandas', 'Plotly', 'yfinance', 'Random Forest'],
-    github: 'https://github.com/Rishith06',
+    github: null,
     live: '#',
     videoDummy: undefined,
     images: [
@@ -271,15 +271,17 @@ export default function Projects() {
                       </p>
 
                       <div className="flex gap-4">
-                        <a 
-                          href={project.github}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-medium transition-colors"
-                        >
-                          <Github size={20} />
-                          Source Code
-                        </a>
+                        {project.github && (
+                          <a 
+                            href={project.github}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-medium transition-colors"
+                          >
+                            <Github size={20} />
+                            Source Code
+                          </a>
+                        )}
                         {/* <a 
                           href={project.live}
                           target="_blank"
