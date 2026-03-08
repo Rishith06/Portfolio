@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Github, ExternalLink, X, PlayCircle, ArrowRight } from 'lucide-react';
+import { Github, X, PlayCircle, ArrowRight } from 'lucide-react';
 
 // --- (Project definitions remain above here, omitted for brevity, will replace below import)
 
