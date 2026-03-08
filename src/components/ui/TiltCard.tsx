@@ -13,24 +13,33 @@ export function TiltCard({ children, className = '', rotationIntensity = 15 }: T
   const [rotateY, setRotateY] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
 
+  const requestRef = useRef<number>(0);
+
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!ref.current) return;
 
-    const rect = ref.current.getBoundingClientRect();
-    const x = e.clientX - rect.left; // x position within the element
-    const y = e.clientY - rect.top; // y position within the element
+    if (requestRef.current !== undefined) {
+      cancelAnimationFrame(requestRef.current);
+    }
 
-    const centerX = rect.width / 2;
-    const centerY = rect.height / 2;
+    requestRef.current = requestAnimationFrame(() => {
+      const rect = ref.current!.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
 
-    const rotateXValue = ((y - centerY) / centerY) * -rotationIntensity;
-    const rotateYValue = ((x - centerX) / centerX) * rotationIntensity;
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
 
-    setRotateX(rotateXValue);
-    setRotateY(rotateYValue);
+      const rotateXValue = ((y - centerY) / centerY) * -rotationIntensity;
+      const rotateYValue = ((x - centerX) / centerX) * rotationIntensity;
+
+      setRotateX(rotateXValue);
+      setRotateY(rotateYValue);
+    });
   };
 
   const handleMouseLeave = () => {
+    if (requestRef.current !== undefined) cancelAnimationFrame(requestRef.current);
     setIsHovered(false);
     setRotateX(0);
     setRotateY(0);
@@ -53,9 +62,9 @@ export function TiltCard({ children, className = '', rotationIntensity = 15 }: T
       }}
       transition={{ 
         type: "spring", 
-        stiffness: 400, 
-        damping: 30,
-        mass: 0.5
+        stiffness: 300, 
+        damping: 40,
+        mass: 1
       }}
       style={{
         transformStyle: 'preserve-3d',

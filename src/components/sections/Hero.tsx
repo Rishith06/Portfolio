@@ -87,9 +87,10 @@ export default function Hero() {
           className="relative hidden md:flex justify-center items-center"
         >
           <div className="relative w-full aspect-square max-w-[500px]">
-            <motion.div animate={{ rotate: 360 }} transition={{ duration: 40, repeat: Infinity, ease: 'linear' }} className="absolute inset-0 rounded-full border border-slate-800/50 border-dashed" />
-            <motion.div animate={{ rotate: -360 }} transition={{ duration: 30, repeat: Infinity, ease: 'linear' }} className="absolute inset-8 rounded-full border border-blue-900/40" />
-            <motion.div animate={{ rotate: 360, scale: [1, 1.05, 1] }} transition={{ duration: 20, repeat: Infinity, ease: 'easeInOut' }} className="absolute inset-16 rounded-full border border-sky-500/20 blur-[2px]" />
+            {/* Optimized background visuals (Removed high-CPU infinite spin loops) */}
+            <div className="absolute inset-0 rounded-full border border-slate-800/50 border-dashed opacity-50" />
+            <div className="absolute inset-8 rounded-full border border-blue-900/40 opacity-50" />
+            <motion.div animate={{ scale: [1, 1.05, 1], opacity: [0.3, 0.5, 0.3] }} transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }} className="absolute inset-16 rounded-full border border-sky-500/20 blur-[2px]" />
             
             {/* Center glow and code snippet */}
             <motion.div 

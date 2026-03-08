@@ -76,13 +76,14 @@ function Slideshow({ images, autoPlay = true }: { images: string[], autoPlay?: b
   return (
     <div className="relative w-full h-full bg-slate-900 group flex items-center justify-center">
       {/* Structural invisible layer to give the div an intrinsic aspect ratio / height */}
-      <img src={images[0]} alt="" className="w-full max-h-[85vh] object-contain invisible pointer-events-none" />
+      <img src={images[0]} loading="lazy" alt="" className="w-full max-h-[85vh] object-contain invisible pointer-events-none" />
       
       <div className="absolute inset-0 overflow-hidden">
         <AnimatePresence mode="popLayout">
           <motion.img
             key={index}
             src={images[index]}
+            loading="lazy"
             initial={{ opacity: 0, scale: 1.05 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0 }}
@@ -151,11 +152,11 @@ export default function Projects() {
                   <>
                     {/* Glitch Effect Container (Now using Video) */}
                     <div className="absolute inset-0 transition-opacity duration-300 group-hover:opacity-0 mix-blend-screen z-10">
-                      <video src={project.videoDummy} muted loop playsInline autoPlay className="absolute inset-0 w-full h-full object-contain bg-black opacity-0 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-100" style={{ filter: 'hue-rotate(-90deg) saturate(200%)' }} />
-                      <video src={project.videoDummy} muted loop playsInline autoPlay className="absolute inset-0 w-full h-full object-contain bg-black opacity-0 group-hover:opacity-100 group-hover:-translate-x-1 group-hover:translate-y-1 transition-all duration-100 delay-50" style={{ filter: 'hue-rotate(90deg) saturate(200%)' }} />
+                      <video src={project.videoDummy} preload="metadata" muted loop playsInline autoPlay className="absolute inset-0 w-full h-full object-contain bg-black opacity-0 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-100" style={{ filter: 'hue-rotate(-90deg) saturate(200%)' }} />
+                      <video src={project.videoDummy} preload="metadata" muted loop playsInline autoPlay className="absolute inset-0 w-full h-full object-contain bg-black opacity-0 group-hover:opacity-100 group-hover:-translate-x-1 group-hover:translate-y-1 transition-all duration-100 delay-50" style={{ filter: 'hue-rotate(90deg) saturate(200%)' }} />
                     </div>
 
-                    <video src={project.videoDummy} muted loop playsInline autoPlay className="w-full h-full object-contain bg-black transition-all duration-300 group-hover:scale-105" />
+                    <video src={project.videoDummy} preload="metadata" muted loop playsInline autoPlay className="w-full h-full object-contain bg-black transition-all duration-300 group-hover:scale-105" />
                     
                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-20">
                       <PlayCircle size={64} className="text-white drop-shadow-xl" strokeWidth={1.5} />
@@ -164,7 +165,7 @@ export default function Projects() {
                 ) : project.images ? (
                   <Slideshow images={project.images} />
                 ) : (
-                  <img src={project.posterDummy} className="w-full h-full object-cover" />
+                  <img src={project.posterDummy} loading="lazy" className="w-full h-full object-cover" />
                 )}
               </div>
               
