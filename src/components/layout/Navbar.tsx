@@ -27,7 +27,7 @@ export default function Navbar() {
         </a>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-4 lg:gap-8">
           {navLinks.map((link) => (
             <a
               key={link.name}
@@ -38,7 +38,7 @@ export default function Navbar() {
             </a>
           ))}
           
-          <div className="flex items-center gap-4 border-l border-slate-700 pl-4 ml-2">
+          <div className="flex items-center gap-4 border-l border-slate-700 pl-4 ml-0 lg:ml-2">
             <a href="https://github.com/Rishith06" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-white transition-colors">
               <Github size={20} />
             </a>
@@ -51,7 +51,7 @@ export default function Navbar() {
             href="https://drive.google.com/file/d/1rCiM1Kjvk50_3_DrDiqpanE5QQ7NZW-Q/view?usp=drive_link"
             target="_blank"
             rel="noreferrer"
-            className="hidden lg:flex px-4 py-2 rounded-full bg-blue-600/10 text-blue-400 font-medium hover:bg-blue-600 hover:text-white transition-all border border-blue-500/30 ml-2"
+            className="flex px-4 py-2 rounded-full bg-blue-600/10 text-blue-400 font-medium hover:bg-blue-600 hover:text-white transition-all border border-blue-500/30 ml-2"
           >
             Resume
           </a>
