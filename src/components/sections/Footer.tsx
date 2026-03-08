@@ -16,8 +16,14 @@ export default function Footer() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl md:text-6xl font-extrabold text-white mb-6 tracking-tight">
-              Let's create something <br />
+            <h2 className="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight">
+              <motion.span
+                whileHover={{ filter: "hue-rotate(90deg)" }}
+                className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-white via-cyan-100 to-white hover:from-blue-400 hover:via-cyan-300 hover:to-sky-400 transition-colors duration-300 cursor-default"
+              >
+                Let's create something
+              </motion.span>
+              <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-sky-300">
                 amazing together.
               </span>
@@ -26,7 +32,9 @@ export default function Footer() {
               Whether you have a question, a project in mind, or just want to say hi, I try my best to get back to you!
             </p>
             <a 
-              href="mailto:rishith292@gmail.com"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=rishith292@gmail.com"
+              target="_blank"
+              rel="noreferrer"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold transition-all hover:scale-105 active:scale-95 shadow-lg shadow-blue-500/25"
             >
               <Mail size={20} />

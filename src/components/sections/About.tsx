@@ -35,7 +35,14 @@ export default function About() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">About Me</h2>
+          <h2 className="text-3xl md:text-5xl font-bold mb-6">
+            <motion.span
+              whileHover={{ filter: "hue-rotate(90deg)" }}
+              className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-white via-cyan-100 to-white hover:from-blue-400 hover:via-cyan-300 hover:to-sky-400 transition-colors duration-300 cursor-default"
+            >
+              About Me
+            </motion.span>
+          </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-sky-400 mx-auto rounded-full" />
         </motion.div>
 
