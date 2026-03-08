@@ -18,6 +18,7 @@ export default function BackgroundEffects() {
           ease: "linear"
         }}
         className="absolute top-0 left-1/4 w-[40vw] h-[40vw] bg-blue-600/10 rounded-full blur-[120px]"
+        style={{ willChange: 'transform' }}
       />
       
       <motion.div
@@ -32,6 +33,7 @@ export default function BackgroundEffects() {
           ease: "linear"
         }}
         className="absolute bottom-0 right-1/4 w-[50vw] h-[50vw] bg-sky-600/10 rounded-full blur-[150px]"
+        style={{ willChange: 'transform' }}
       />
       
       {/* Starry/Noise Overlay */}

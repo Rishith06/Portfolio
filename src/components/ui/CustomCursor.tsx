@@ -53,6 +53,8 @@ export default function CustomCursor() {
         style={{
           x: cursorX,
           y: cursorY,
+          willChange: 'transform',
+          translateZ: 0,
         }}
         animate={{
           scale: isHovered ? 1.5 : 1,
@@ -64,7 +66,8 @@ export default function CustomCursor() {
       <div 
         className="fixed top-0 left-0 w-2 h-2 bg-blue-400 rounded-full pointer-events-none z-[9999]"
         style={{
-          transform: `translate(${mousePosition.x - 4}px, ${mousePosition.y - 4}px)`,
+          transform: `translate(${mousePosition.x - 4}px, ${mousePosition.y - 4}px) translateZ(0)`,
+          willChange: 'transform',
         }}
       />
     </>

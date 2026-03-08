@@ -72,6 +72,7 @@ export default function Navbar() {
           initial={{ opacity: 0, scale: 0.95, y: -20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           className="absolute top-20 left-6 right-6 glass bg-slate-900/95 backdrop-blur-xl rounded-2xl p-4 flex flex-col gap-4 md:hidden shadow-2xl border border-slate-700/50 z-50"
+          style={{ willChange: 'transform, opacity' }}
         >
           {navLinks.map((link) => (
             <a

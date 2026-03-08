@@ -58,6 +58,7 @@ export default function Skills() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
+              style={{ willChange: 'transform, opacity' }}
               className={`h-full ${item.colSpan}`}
             >
               <TiltCard rotationIntensity={15} className={`glass p-8 rounded-3xl border border-slate-700/50 relative overflow-hidden group h-full`}>

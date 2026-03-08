@@ -33,6 +33,7 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
+          style={{ willChange: 'transform, opacity' }}
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
@@ -52,6 +53,7 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, delay: 0.2 }}
+            style={{ willChange: 'transform, opacity' }}
             className="space-y-6 text-slate-300 text-lg leading-relaxed"
           >
             <p>
@@ -76,6 +78,7 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, delay: 0.4 }}
+            style={{ willChange: 'transform, opacity' }}
             className="grid grid-cols-1 sm:grid-cols-2 gap-4"
           >
             {highlights.map((item, idx) => (

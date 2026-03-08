@@ -144,6 +144,7 @@ export default function Projects() {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
               onClick={() => setSelectedId(project.id)}
+              style={{ willChange: 'transform, opacity' }}
               className="group cursor-pointer glass rounded-3xl overflow-hidden border border-slate-700/50 hover:border-blue-500/50 transition-colors"
             >
               {/* Media Container - Persistent AutoPlay Video or Slideshow */}

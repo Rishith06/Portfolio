@@ -47,6 +47,7 @@ export default function Awards() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, delay: 0.2 }}
+            style={{ willChange: 'transform, opacity' }}
           >
             <div className="glass p-8 md:p-10 rounded-3xl border border-slate-700/50 relative overflow-hidden group">
               <div className="absolute top-0 right-0 w-40 h-40 bg-yellow-500/10 rounded-full blur-3xl group-hover:bg-yellow-500/20 transition-colors" />
@@ -74,6 +75,7 @@ export default function Awards() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
+                style={{ willChange: 'transform, opacity' }}
                 className="w-full overflow-hidden rounded-2xl glass border border-slate-700/50 shadow-xl aspect-square"
               >
                 <img 
@@ -95,6 +97,7 @@ export default function Awards() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, delay: 0.2 }}
+            style={{ willChange: 'transform, opacity' }}
           >
             <div className="glass p-8 md:p-10 rounded-3xl border border-slate-700/50 relative overflow-hidden group">
               <div className="absolute top-0 left-0 w-40 h-40 bg-sky-500/10 rounded-full blur-3xl group-hover:bg-sky-500/20 transition-colors z-0" />
@@ -125,6 +128,7 @@ export default function Awards() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
+                style={{ willChange: 'transform, opacity' }}
                 className={`w-full overflow-hidden rounded-2xl glass border border-slate-700/50 shadow-xl ${idx === 0 || idx === 3 ? 'aspect-[4/5]' : 'aspect-square'}`}
               >
                 <img 
