@@ -44,7 +44,7 @@ export default function Hero() {
               whileHover={{ scale: 1.05, filter: "hue-rotate(90deg)" }}
               className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-300 to-sky-400 cursor-default transition-all duration-300 relative z-20"
             >
-              Raja Rishith
+              Ram Rishith
             </motion.span>
           </motion.h1>
           
