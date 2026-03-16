@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Menu, X, Github, Linkedin } from 'lucide-react';
 import { useState } from 'react';
+import rrLogo from '../../assets/RR.png';
 
 const navLinks = [
   { name: 'About', href: '#about' },
@@ -22,8 +23,11 @@ export default function Navbar() {
       className="fixed top-0 left-0 right-0 z-50 px-6 py-4"
     >
       <div className="max-w-7xl mx-auto glass rounded-2xl px-6 py-3 flex items-center justify-between">
-        <a href="#" className="text-xl font-bold bg-gradient-to-r from-blue-400 to-sky-400 bg-clip-text text-transparent hover:opacity-80 transition-opacity">
-          Ram Rishith
+        <a href="#" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+          <img src={rrLogo} alt="Logo" className="w-10 h-10 object-contain" />
+          <span className="text-xl font-bold bg-gradient-to-r from-blue-400 to-sky-400 bg-clip-text text-transparent">
+            Raja Rishith
+          </span>
         </a>
 
         {/* Desktop Nav */}
