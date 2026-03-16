@@ -91,14 +91,17 @@ export default function Footer() {
           className="pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4"
         >
           <p className="text-slate-500 text-sm">
-            © {new Date().getFullYear()} Raja Rishith. All rights reserved.
+            © {new Date().getFullYear()} Ram Rishith. All rights reserved.
           </p>
           
           <div className="flex items-center gap-6">
             <a href="https://github.com/Rishith06" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-white transition-colors">
               <Github size={20} />
             </a>
-            <a href="https://www.linkedin.com/in/raja-rishi-27baa2306/" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-white transition-colors">
+            {/* <a href="https://www.linkedin.com/in/raja-rishi-27baa2306/" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-white transition-colors">
+              <Linkedin size={20} />
+            </a> */}
+            <a href="https://www.linkedin.com/in/ram-rishith" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-white transition-colors">
               <Linkedin size={20} />
             </a>
           </div>
