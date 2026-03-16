@@ -23,7 +23,7 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto glass rounded-2xl px-6 py-3 flex items-center justify-between">
         <a href="#" className="text-xl font-bold bg-gradient-to-r from-blue-400 to-sky-400 bg-clip-text text-transparent hover:opacity-80 transition-opacity">
-          Raja Rishith
+          Ram Rishith
         </a>
 
         {/* Desktop Nav */}

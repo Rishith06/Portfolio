@@ -109,7 +109,7 @@ export default function Hero() {
                     initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 1 }}
                     className="pl-4"
                   >
-                    name: <span className="text-green-300">'Raja Rishith'</span>,
+                    name: <span className="text-green-300">'Ram Rishith'</span>,
                   </motion.div>
                   <motion.div 
                     initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 1.5 }}
