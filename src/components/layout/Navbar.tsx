@@ -94,7 +94,7 @@ export default function Navbar() {
               <a href="https://github.com/Rishith06" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-white transition-colors">
                 <Github size={24} />
               </a>
-              <a href="https://www.linkedin.com/in/raja-rishi-27baa2306/" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-white transition-colors">
+              <a href="https://www.linkedin.com/in/ram-rishith" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-white transition-colors">
                 <Linkedin size={24} />
               </a>
             </div>
